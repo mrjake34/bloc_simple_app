@@ -8,3 +8,5 @@ sealed class HomeEvent extends Equatable {
 }
 
 final class FetchTodosEvent extends HomeEvent {}
+
+final class DeleteTodosEvent extends HomeEvent {}

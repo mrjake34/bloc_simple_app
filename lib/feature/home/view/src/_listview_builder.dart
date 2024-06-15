@@ -6,13 +6,24 @@ class _ListViewBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<HomeBloc>();
     return ListView.builder(
       itemCount: todos.length,
       itemBuilder: (context, index) {
         final todo = todos[index];
-        return ListTile(
-          title: Text(todo.title ?? ''),
-          subtitle: Text('${todo.id ?? 0}'),
+        return Card(
+          child: ListTile(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => DetailView(
+                      todo: todo,
+                      bloc: bloc,
+                    ))),
+            title: Text(todo.title ?? ''),
+            trailing: todo.completed == true
+                ? const Icon(Icons.check_circle)
+                : const Icon(Icons.circle_outlined),
+            leading: CircleAvatar(child: Text(index.toString())),
+          ),
         );
       },
     );

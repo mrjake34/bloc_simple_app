@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:bloc_simple_app/product/base/model/base_response_model.dart';
+import 'package:bloc_simple_app/product/state/base/model/base_response_model.dart';
 import 'package:bloc_simple_app/product/utils/service/iservice_manager.dart';
 import 'package:dio/dio.dart';
 
