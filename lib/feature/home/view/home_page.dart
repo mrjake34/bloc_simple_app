@@ -1,6 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bloc_simple_app/feature/home/bloc/home_bloc.dart';
 import 'package:bloc_simple_app/feature/home/service/todo_service.dart';
-import 'package:bloc_simple_app/feature/detail/view/detail_view.dart';
+import 'package:bloc_simple_app/feature/detail/view/detail_page.dart';
+import 'package:bloc_simple_app/product/router/app_router.dart';
+import 'package:bloc_simple_app/product/router/route_path.dart';
 import 'package:bloc_simple_app/product/src/bottomsheet/custom_bottom_sheet.dart';
 import 'package:bloc_simple_app/product/utils/service/dio_service_manager.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +16,9 @@ part 'src/_error_field.dart';
 part 'src/_loading_field.dart';
 part 'src/_edit_bottom_sheet.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+@RoutePage()
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +27,13 @@ class HomeView extends StatelessWidget {
           HomeBloc(TodoService(DioServiceManager()))..add(FetchTodosEvent()),
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              const path = '/simple_one/efestech/';
+              context.router.pushNamed(path);
+            },
+            icon: const Icon(Icons.run_circle),
+          ),
           title: const Text('Todos'),
           actions: const [_IconButton()],
         ),
@@ -33,9 +44,7 @@ class HomeView extends StatelessWidget {
 }
 
 class _IconButton extends StatelessWidget {
-  const _IconButton({
-    super.key,
-  });
+  const _IconButton();
 
   @override
   Widget build(BuildContext context) {

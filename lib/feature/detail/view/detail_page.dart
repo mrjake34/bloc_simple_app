@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bloc_simple_app/feature/home/bloc/home_bloc.dart';
 import 'package:bloc_simple_app/feature/home/model/todos.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class DetailView extends StatelessWidget {
-  const DetailView({super.key, required this.todo, required this.bloc});
+@RoutePage()
+class DetailPage extends StatelessWidget {
+  const DetailPage({super.key, required this.todo, required this.bloc});
   final Todos todo;
   final HomeBloc bloc;
 

@@ -1,4 +1,4 @@
-part of '../home_view.dart';
+part of '../home_page.dart';
 
 class _LoadingField extends StatelessWidget {
   const _LoadingField();
