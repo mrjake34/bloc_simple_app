@@ -23,6 +23,7 @@ class DetailPage extends StatelessWidget {
             builder: (context, state) {
               return Column(
                 children: [
+                  const Text('Detail Page'),
                   Text('${todo.userId ?? ''}'),
                   Text(todo.title ?? ''),
                   Text('${todo.completed ?? ''}'),

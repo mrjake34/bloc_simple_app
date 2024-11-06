@@ -127,6 +127,82 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [HomeThreePage]
+class HomeThreeRoute extends PageRouteInfo<void> {
+  const HomeThreeRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeThreeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeThreeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomeThreePage();
+    },
+  );
+}
+
+/// generated route for
+/// [HomeTwoPage]
+class HomeTwoRoute extends PageRouteInfo<void> {
+  const HomeTwoRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeTwoRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeTwoRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomeTwoPage();
+    },
+  );
+}
+
+/// generated route for
+/// [ListPage]
+class ListRoute extends PageRouteInfo<void> {
+  const ListRoute({List<PageRouteInfo>? children})
+      : super(
+          ListRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ListRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ListPage();
+    },
+  );
+}
+
+/// generated route for
+/// [MainPage]
+class MainRoute extends PageRouteInfo<void> {
+  const MainRoute({List<PageRouteInfo>? children})
+      : super(
+          MainRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MainRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const MainPage();
+    },
+  );
+}
+
+/// generated route for
 /// [SimpleOnePage]
 class SimpleOneRoute extends PageRouteInfo<SimpleOneRouteArgs> {
   SimpleOneRoute({
@@ -177,6 +253,25 @@ class SimpleOneRouteArgs {
 }
 
 /// generated route for
+/// [SimpleThreePage]
+class SimpleThreeRoute extends PageRouteInfo<void> {
+  const SimpleThreeRoute({List<PageRouteInfo>? children})
+      : super(
+          SimpleThreeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SimpleThreeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SimpleThreePage();
+    },
+  );
+}
+
+/// generated route for
 /// [SimpleTwoPage]
 class SimpleTwoRoute extends PageRouteInfo<void> {
   const SimpleTwoRoute({List<PageRouteInfo>? children})
@@ -191,6 +286,25 @@ class SimpleTwoRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SimpleTwoPage();
+    },
+  );
+}
+
+/// generated route for
+/// [SplashPage]
+class SplashRoute extends PageRouteInfo<void> {
+  const SplashRoute({List<PageRouteInfo>? children})
+      : super(
+          SplashRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SplashRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SplashPage();
     },
   );
 }

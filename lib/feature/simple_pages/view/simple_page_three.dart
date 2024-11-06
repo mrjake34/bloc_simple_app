@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class SimpleTwoPage extends StatelessWidget {
-  const SimpleTwoPage({
+class SimpleThreePage extends StatelessWidget {
+  const SimpleThreePage({
     super.key,
   });
 
@@ -11,10 +11,10 @@ class SimpleTwoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Simple Page Two'),
+        title: const Text('Simple Page Three'),
       ),
       body: const Center(
-        child: Text('Simple Page Two'),
+        child: Text('Simple Page Three'),
       ),
     );
   }
